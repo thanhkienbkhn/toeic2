@@ -2,11 +2,13 @@ package vn.kien.core.persistence.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
 public class User {
     @Id
+    @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer userId;
 
@@ -62,9 +64,6 @@ public class User {
         this.createdDate = createdDate;
     }
 
-    @Column(name = "role_id")
-    private Integer role_id;
-
     @ManyToOne
     @JoinColumn(name = "role_id")
     private Role role;
@@ -75,5 +74,16 @@ public class User {
 
     public void setRole(final Role role) {
         this.role = role;
+    }
+
+    @OneToMany(mappedBy = "comment", fetch = FetchType.LAZY)
+    private List<Comment> commentList;
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
     }
 }

@@ -13,5 +13,7 @@
         <property name="show_sql">true</property>
         <mapping class="vn.kien.core.persistence.entity.Role"/>
         <mapping class="vn.kien.core.persistence.entity.User"/>
+        <mapping class="vn.kien.core.persistence.entity.Listen"/>
+        <mapping class="vn.kien.core.persistence.entity.Comment"/>
     </session-factory>
 </hibernate-configuration>

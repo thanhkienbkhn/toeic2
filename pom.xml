@@ -19,6 +19,7 @@
         <module>toeic-core-utils</module>
         <module>toeic-core-persistence-data</module>
         <module>toeic-core-common</module>
+        <module>toeic-core-test</module>
     </modules>
     <packaging>pom</packaging>
 

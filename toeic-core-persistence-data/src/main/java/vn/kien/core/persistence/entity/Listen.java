@@ -2,11 +2,13 @@ package vn.kien.core.persistence.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
-@Table(name="listen")
+@Table(name = "listen")
 public class Listen {
     @Id
+    @Column(name = "listen_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer listenId;
 
@@ -49,5 +51,16 @@ public class Listen {
 
     public void setModifiedDate(final Timestamp modifiedDate) {
         this.modifiedDate = modifiedDate;
+    }
+
+    @OneToMany(mappedBy = "comment", fetch = FetchType.LAZY)
+    private List<Comment> commentList;
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
     }
 }

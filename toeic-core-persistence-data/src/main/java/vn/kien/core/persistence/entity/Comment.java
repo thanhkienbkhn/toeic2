@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 @Table(name="comment")
 public class Comment {
     @Id
+    @Column(name = "comment_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer commentId;
 
@@ -38,5 +39,29 @@ public class Comment {
 
     public void setCreatedDate(final Timestamp createdDate) {
         this.createdDate = createdDate;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "listen_id")
+    private Listen listen;
+
+    public Listen getListen() {
+        return listen;
+    }
+
+    public void setListen(Listen listen) {
+        this.listen = listen;
     }
 }
