@@ -76,7 +76,7 @@ public class User {
         this.role = role;
     }
 
-    @OneToMany(mappedBy = "comment", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Comment> commentList;
 
     public List<Comment> getCommentList() {

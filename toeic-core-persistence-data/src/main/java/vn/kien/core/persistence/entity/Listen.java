@@ -20,6 +20,28 @@ public class Listen {
         this.listenId = listenId;
     }
 
+    @Column(name = "title")
+    private String title;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(final String title) {
+        this.title = title;
+    }
+
+    @Column(name = "image")
+    private String image;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(final String image) {
+        this.image = image;
+    }
+
     @Column(name = "content")
     private String content;
 
@@ -53,7 +75,7 @@ public class Listen {
         this.modifiedDate = modifiedDate;
     }
 
-    @OneToMany(mappedBy = "comment", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "listen", fetch = FetchType.LAZY)
     private List<Comment> commentList;
 
     public List<Comment> getCommentList() {

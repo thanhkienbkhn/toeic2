@@ -10,6 +10,7 @@ import vn.kien.core.data.dao.GenericDao;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class AbstractDao<ID extends Serializable, T> implements GenericDao<ID, T> {
@@ -25,7 +26,7 @@ public class AbstractDao<ID extends Serializable, T> implements GenericDao<ID, T
 
     @Override
     public List<T> findAll() {
-        List<T> list = new ArrayList<>();
+        List<T> list;
         Transaction transaction = this.getSession().beginTransaction();
 
         try {
@@ -62,6 +63,5 @@ public class AbstractDao<ID extends Serializable, T> implements GenericDao<ID, T
     protected Session getSession() {
         return HibernateUtil.getSessionFactory().openSession();
     }
-
 
 }

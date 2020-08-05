@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/toeic-core-persistence-data/toeic-core-persistence-data.iml" filepath="$PROJECT_DIR$/toeic-core-persistence-data/toeic-core-persistence-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/toeic-core-service/toeic-core-service.iml" filepath="$PROJECT_DIR$/toeic-core-service/toeic-core-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/toeic-core-service-impl/toeic-core-service-impl.iml" filepath="$PROJECT_DIR$/toeic-core-service-impl/toeic-core-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/toeic-core-test/toeic-core-test.iml" filepath="$PROJECT_DIR$/toeic-core-test/toeic-core-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/toeic-core-utils/toeic-core-utils.iml" filepath="$PROJECT_DIR$/toeic-core-utils/toeic-core-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/toeic-web/toeic-web.iml" filepath="$PROJECT_DIR$/toeic-web/toeic-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/toeic-web-logic/toeic-web-logic.iml" filepath="$PROJECT_DIR$/toeic-web-logic/toeic-web-logic.iml" />
