@@ -9,9 +9,10 @@
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">bachkhoa</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/toeic</property>
-        <property name="hbm2ddl.auto">create</property>
         <property name="show_sql">true</property>
         <mapping class="vn.kien.core.persistence.entity.Role"/>
         <mapping class="vn.kien.core.persistence.entity.User"/>
+        <mapping class="vn.kien.core.persistence.entity.Listen"/>
+        <mapping class="vn.kien.core.persistence.entity.Comment"/>
     </session-factory>
 </hibernate-configuration>

@@ -4,9 +4,9 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "role")
 public class Role {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "role_id")
     private Integer roleId;
 
@@ -30,13 +30,13 @@ public class Role {
     }
 
     @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
-    private List<User> userList;
+    private List<Users> usersList;
 
-    public List<User> getUserList() {
-        return userList;
+    public List<Users> getUsersList() {
+        return usersList;
     }
 
-    public void setUserList(final List<User> userList) {
-        this.userList = userList;
+    public void setUsersList(final List<Users> usersList) {
+        this.usersList = usersList;
     }
 }

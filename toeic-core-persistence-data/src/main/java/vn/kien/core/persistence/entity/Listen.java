@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
-@Table(name = "listen")
+@Table
 public class Listen {
     @Id
     @Column(name = "listen_id")

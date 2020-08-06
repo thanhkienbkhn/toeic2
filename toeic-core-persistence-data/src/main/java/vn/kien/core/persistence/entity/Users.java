@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
-public class User {
+public class Users {
     @Id
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -64,8 +63,19 @@ public class User {
         this.createdDate = createdDate;
     }
 
+    @Column(name = "role_id")
+    private Integer role_id;
+
+    public Integer getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(final Integer role_id) {
+        this.role_id = role_id;
+    }
+
     @ManyToOne
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "role_id", insertable = false, updatable = false)
     private Role role;
 
     public Role getRole() {
@@ -76,7 +86,7 @@ public class User {
         this.role = role;
     }
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "users", fetch = FetchType.LAZY)
     private List<Comment> commentList;
 
     public List<Comment> getCommentList() {
